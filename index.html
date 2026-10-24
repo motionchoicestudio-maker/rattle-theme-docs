@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rattle theme documentation</title>
+<style>
+  :root { --ink: #0e0e0e; --mute: #5f5f5f; --line: #e6e6e6; --tile: #f3f3f3; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.6 Inter, -apple-system, system-ui, sans-serif; color: var(--ink); background: #fff; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 72px 24px 120px; }
+  h1 { font-size: 56px; line-height: 1; letter-spacing: -0.04em; margin: 0 0 16px; font-weight: 600; }
+  h2 { font-size: 30px; letter-spacing: -0.03em; margin: 64px 0 12px; padding-top: 24px; border-top: 1px solid var(--line); font-weight: 600; }
+  h3 { font-size: 19px; margin: 28px 0 6px; }
+  p, li { color: #2b2b2b; }
+  .lead { font-size: 19px; color: var(--mute); }
+  nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 32px 0 0; }
+  nav a { padding: 8px 14px; border-radius: 100px; background: var(--tile); color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; }
+  code { background: var(--tile); padding: 2px 6px; border-radius: 6px; font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+  td, th { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--mute); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Rattle</h1>
+  <p class="lead">A Shopify theme for brands with a small, focused catalog. This guide covers setup, every section and the theme settings.</p>
+  <nav>
+    <a href="#start">Getting started</a><a href="#settings">Theme settings</a><a href="#home">Homepage sections</a><a href="#pages">Pages</a><a href="#products">Products and cart</a><a href="#faq">FAQ</a><a href="#support">Support</a>
+  </nav>
+
+  <h2 id="start">Getting started</h2>
+  <ol>
+    <li>In Shopify admin open <b>Online Store → Themes</b>, add Rattle and click <b>Customize</b>.</li>
+    <li>In <b>Header</b> upload your logo and pick the main menu. The menu link named in <b>Shop panel → Menu link that opens the panel</b> (default <code>Shop</code>) opens a panel with your products.</li>
+    <li>Set colours, font and favicon in <b>Theme settings</b>.</li>
+    <li>Fill the homepage sections with your images and text. Every section can be hidden, reordered or removed.</li>
+    <li>Create the About and Contact pages and assign the <code>page.about</code> and <code>page.contact</code> templates.</li>
+  </ol>
+
+  <h2 id="settings">Theme settings</h2>
+  <table>
+    <tr><th>Group</th><th>What it controls</th></tr>
+    <tr><td>Typography</td><td>One font for the whole store, picked from the Shopify font library. Bold and italic styles load automatically.</td></tr>
+    <tr><td>Favicon</td><td>Square image shown in browser tabs (at least 32 × 32 px).</td></tr>
+    <tr><td>Layout</td><td>Maximum page width and the minimum side margin.</td></tr>
+    <tr><td>Colors</td><td>Background and text; button background and text; card background and text (photo tiles, cards, form fields); image shade and text on images (the homepage photo and anything over a photo); input corner radius.</td></tr>
+    <tr><td>Animations</td><td><b>Reveal sections on scroll</b>: headings, cards and tiles fade up gently once. Nothing on the first screen animates, and nothing moves for visitors who turn on reduced motion.</td></tr>
+  </table>
+
+  <h2 id="home">Homepage sections</h2>
+  <h3>Hero</h3><p>Full-screen photo with a short tagline, a line of text and a large wordmark. Optional button.</p>
+  <h3>Product grid</h3><p>Pick a collection or products. Colour swatches switch the photo; the round button adds to the cart without leaving the page.</p>
+  <h3>Details</h3><p>A list of product parts (blocks). Each part has its own photo, label and text; the photo cross-fades when a part is picked.</p>
+  <h3>Compare</h3><p>One row per product with columns you define (blocks): typed values, metafields, product type or vendor. On phones every product becomes a card.</p>
+  <h3>Lifestyle strip</h3><p>A running strip of photos across a background photo or a tilted product cut-out.</p>
+  <h3>Reviews mosaic</h3><p>Review blocks in three columns with an average-rating card. Use real reviews only, or connect a reviews app.</p>
+  <h3>FAQ</h3><p>Questions as blocks. On desktop the answer shows in a panel beside the list; on phones the list opens like an accordion. Includes a contact button.</p>
+  <h3>Final call</h3><p>A large heading, short text and a button, with optional product cut-outs peeking from the sides.</p>
+
+  <h2 id="pages">Pages</h2>
+  <h3>About</h3><p>Sections: <b>Our story</b> (edge-to-edge photo, heading and two paragraphs), <b>Photo list</b> (steps or people: rows whose photo appears beside the cursor), <b>Numbers</b> (up to four figures that count up), <b>Principles</b>, <b>Shop link</b> and <b>Let's talk</b> (contact form).</p>
+  <h3>Contact</h3><p>Photo and contact form. Messages go to the store's sender email (<b>Settings → Notifications</b>). The store email line appears only when the store has one and the option is on.</p>
+  <h3>Policies</h3><p>Shipping, refund, privacy and terms pages come from <b>Settings → Policies</b> and are linked in the footer automatically.</p>
+
+  <h2 id="products">Products and cart</h2>
+  <ul>
+    <li>Colour options use the swatch colour set on the product option, or the colour name.</li>
+    <li>The product page supports variant pickers, quantity, dynamic checkout buttons, pickup availability, gift card recipients and recommendations.</li>
+    <li>The cart supports notes, discounts, subscriptions and accelerated checkout buttons.</li>
+  </ul>
+
+  <h2 id="faq">FAQ</h2>
+  <h3>Can I turn off the hover panel on Shop?</h3><p>Yes: clear <b>Header → Shop panel → Menu link that opens the panel</b>.</p>
+  <h3>How do I change the button colour?</h3><p><b>Theme settings → Colors → Button background</b> and <b>Button text</b>.</p>
+  <h3>The animations are distracting.</h3><p>Uncheck <b>Theme settings → Animations → Reveal sections on scroll</b>.</p>
+
+  <h2 id="support">Support</h2>
+  <p>Questions about the theme, a bug or a feature request: write to the theme support address listed in the Shopify Theme Store, with your store URL and a short description or screenshot. We reply within two business days.</p>
+</div>
+</body>
+</html>
