@@ -18,7 +18,6 @@
   input, textarea { width: 100%; font: inherit; padding: 12px 14px; border: 1px solid #cfcfcf; border-radius: 12px; background: #fff; color: var(--ink); }
   input:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
   textarea { min-height: 160px; resize: vertical; }
-  input[type="file"] { padding: 10px; background: var(--tile); border-style: dashed; }
   button { justify-self: start; font: inherit; font-weight: 500; padding: 14px 26px; border: 0; border-radius: 100px; background: var(--ink); color: #fff; cursor: pointer; }
   .sent { display: none; padding: 16px 18px; border-radius: 12px; background: var(--tile); margin-bottom: 32px; }
   .sent:target, .is-sent .sent { display: block; }
@@ -31,7 +30,7 @@
   <p class="lead">Questions about Rattle, a bug or a feature request. A person reads every message and replies within two business days.</p>
   <p class="sent" id="sent" role="status">Thanks, your request is in. We have sent a copy to your email and will reply within two business days.</p>
 
-  <form action="https://formsubmit.co/promakdesign@gmail.com" method="POST" enctype="multipart/form-data">
+  <form action="https://formsubmit.co/promakdesign@gmail.com" method="POST">
     <input type="hidden" name="_subject" value="Rattle theme support request">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_next" value="https://motionchoicestudio-maker.github.io/rattle-theme-docs/support.html?sent=1#sent">
@@ -54,10 +53,11 @@
       <textarea id="message" name="message" required></textarea>
     </div>
     <div>
-      <label for="attachment">Screenshot <span class="hint">optional, image up to 5 MB</span></label>
-      <input id="attachment" name="attachment" type="file" accept="image/*">
+      <label for="screenshot">Screenshot link <span class="hint">optional, for example a Google Drive, Dropbox or Imgur link</span></label>
+      <input id="screenshot" name="screenshot_link" type="url" placeholder="https://">
     </div>
     <button type="submit">Send request</button>
+    <p class="hint" style="margin:0">Sending can take up to a minute. Please keep this page open.</p>
   </form>
 </div>
 <script>
